@@ -9,13 +9,18 @@ images = [
   ' assets/img/04.webp ',
   ' assets/img/05.webp ',
 
-],
+];
+
+const img = document.getElementsByClassName('img');
 
 imgContainer = document.getElementById('img-container');
 
 const btnNext = document.querySelector('.pm-up');
 
 const btnPrev = document.querySelector('.pm-down');
+
+const carouselMenuItem = document.getElementsByClassName("carouselMenu");
+console.log(carouselMenuItem);
 
 
 
@@ -33,11 +38,14 @@ for (let i = 0; i < images.length; i++) {
   <img class="img rounded-4 d-none" src="${element}" >
   `;
 
+
   
 }
 
-const img = document.getElementsByClassName('img');
+
 img[imgCounter].classList.remove('d-none')
+
+
 
 // aggiungere l'evento click ai bottoni 
 
@@ -46,9 +54,12 @@ btnNext.addEventListener('click', function(){
   imgCounter++;
   img[imgCounter].classList.remove ('d-none');
   btnPrev.classList.remove ('d-none');
+
   if(imgCounter === images.length - 1) {
  btnNext.classList.add('d-none');
 }
+
+
 
 })
 
@@ -66,6 +77,11 @@ btnPrev.addEventListener('click', function(){
 
 
 })
+
+
+
+
+
 
 
 
