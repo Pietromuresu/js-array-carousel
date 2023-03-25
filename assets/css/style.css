@@ -74,5 +74,7 @@ body{
 .active {
   border: 5px solid white;
   filter: none;
+  box-shadow: 0 0 5px;
+  height: 110%;
 }
 

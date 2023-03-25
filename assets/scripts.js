@@ -13,19 +13,22 @@ images = [
 
 const img = document.getElementsByClassName('img');
 
-imgContainer = document.getElementById('img-container');
+const imgContainer = document.getElementById('img-container');
 
 const btnNext = document.querySelector('.pm-up');
 
 const btnPrev = document.querySelector('.pm-down');
 
 const carouselMenuItem = document.getElementsByClassName("carouselMenu");
-console.log(carouselMenuItem);
+
+
+
 
 
 
 
 let imgCounter = 0 ;
+let carouselCounter = 0; 
 btnPrev.classList.add('d-none');
 
 
@@ -37,21 +40,25 @@ for (let i = 0; i < images.length; i++) {
   imgContainer.innerHTML += `  
   <img class="img rounded-4 d-none" src="${element}" >
   `;
+    
 
 
-  
+
+
+    
 }
 
-
 img[imgCounter].classList.remove('d-none')
-
-
 
 // aggiungere l'evento click ai bottoni 
 
 btnNext.addEventListener('click', function(){
   img[imgCounter].classList.add ('d-none');
   imgCounter++;
+  console.log(imgCounter)
+  
+  
+  
   img[imgCounter].classList.remove ('d-none');
   btnPrev.classList.remove ('d-none');
 
@@ -61,11 +68,28 @@ btnNext.addEventListener('click', function(){
 
 
 
+
+carouselCounter++;
+  console.log(carouselCounter);
+
+
+carouselMenuItem[carouselCounter].classList.add('active');
+
+carouselMenuItem[!(carouselCounter)].classList.remove('active');
+
+
+
+  
+    
 })
+
+
 
 btnPrev.addEventListener('click', function(){
   img[imgCounter].classList.add ('d-none');
   imgCounter--;
+  carouselCounter--;
+  
   img[imgCounter].classList.remove ('d-none');
   
   btnNext.classList.remove ('d-none');
@@ -76,7 +100,12 @@ btnPrev.addEventListener('click', function(){
   }
 
 
+
+
+
 })
+
+
 
 
 
