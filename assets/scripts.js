@@ -67,28 +67,29 @@ btnNext.addEventListener('click', function(){
 }
 
 
-
-
+carouselMenuItem[carouselCounter].classList.remove('active')
 carouselCounter++;
+
+carouselMenuItem[carouselCounter].classList.add('active')
+
+
+
+
   console.log(carouselCounter);
-
-
 carouselMenuItem[carouselCounter].classList.add('active');
 
-carouselMenuItem[!(carouselCounter)].classList.remove('active');
 
 
-
-  
     
 })
+
+
 
 
 
 btnPrev.addEventListener('click', function(){
   img[imgCounter].classList.add ('d-none');
   imgCounter--;
-  carouselCounter--;
   
   img[imgCounter].classList.remove ('d-none');
   
@@ -98,6 +99,12 @@ btnPrev.addEventListener('click', function(){
   btnPrev.classList.add ('d-none');
 
   }
+
+
+  carouselMenuItem[carouselCounter].classList.remove('active')
+carouselCounter--;
+
+carouselMenuItem[carouselCounter].classList.add('active')
 
 
 
