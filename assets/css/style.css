@@ -68,8 +68,11 @@ body{
 
 .pm-container-slides div {
   height: 100px;
+
  
 }
+
+
 
 .active {
   border: 5px solid white;

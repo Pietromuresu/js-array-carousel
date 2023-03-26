@@ -76,16 +76,15 @@ btnNext.addEventListener('click', function(){
 
   if (carouselCounter > img.length - 1 ){
     carouselCounter = 0;
-    
     };
 
-  carouselMenuItem[carouselCounter].  classList.add('active');
+  carouselMenuItem[carouselCounter].classList.add('active');
 
 
 
 
   console.log(carouselCounter);
-  carouselMenuItem[carouselCounter].  classList.add('active');
+  carouselMenuItem[carouselCounter].classList.add('active');
 
     
 })
@@ -106,7 +105,7 @@ btnPrev.addEventListener('click', function(){
 
   img[imgCounter].classList.remove ('d-none');
   
-  btnNext.classList.remove ('d-none');
+  
 
 
   carouselMenuItem[carouselCounter].classList.remove('active');
